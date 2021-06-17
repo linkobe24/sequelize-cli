@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const { connection } = require('./database/db')
 
 //settings
 const PORT = process.env.PORT || 3300;
@@ -16,4 +17,10 @@ app.get('/', (req, res) => {
 //server initialization
 app.listen(PORT, () => {
     console.log(`app is listening at http://localhost:${PORT}`);
+
+    connection.sync({ force: true }).then(() => {
+        console.log('Tables synchronized');
+    }).catch(err => {
+        console.error(`An error has ocurred ${err}`);
+    });
 });
