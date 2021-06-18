@@ -8,8 +8,5 @@ module.exports = {
   host: process.env.DB_HOST || "DESKTOP-AQMFC8J",
   port: process.env.DB_PORT || 1433,
   dialect: process.env.DB_DIALECT || "mssql",
-  define: {
-    timestamps: false
-  }
 }
 
