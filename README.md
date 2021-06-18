@@ -1,5 +1,5 @@
 # sequelize-cli
-## Connection to a MSSQL DB created through sequelize.
+## MSSQL (tedious) example of models, migration, seeders -> sequelize-cli
 ### steps until now
 1. initate an npm package
 2. Install dependencies -> express, sequelize, tedious (for mssql), dotenv
